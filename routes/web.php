@@ -32,11 +32,4 @@ Route::controller(GithubController::class)->group(function () {
     Route::get('auth/github/callback', 'HandleGithubCallback');
 });
 
-
-// Linkedin Auth Routes
-Route::controller(LinkedinController::class)->group(function () {
-    Route::get('auth/linkedin', 'RedirectToLinkedin')->name('auth.linkedin');
-    Route::get('auth/linkedin/callback', 'HandleLinkedinCallback');
-});
-
 require __DIR__ . '/auth.php';

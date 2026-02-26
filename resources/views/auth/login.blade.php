@@ -44,10 +44,18 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
-            <a href="{{ route('auth.google') }}" style="color: #ffff">Continue With Google</a>
-            <a href="{{ route('auth.github') }}" style="color: #ffff">Continue With Github</a>
-            <a href="{{ route('auth.linkedin') }}" style="color: #ffff">Continue With Linkedin</a>
-            <a href="#" style="color: #ffff">Continue With Facebook</a>
+
+        </div>
+        <div class="flex flex-col gap-3 mt-4 w-full">
+            <a href="{{ route('auth.google') }}"
+                class="w-full inline-flex justify-center items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 focus:bg-red-700 active:bg-red-800 focus:outline-none transition ease-in-out duration-150">
+                Continue with Google
+            </a>
+
+            <a href="{{ route('auth.github') }}"
+                class="w-full inline-flex justify-center items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800 focus:outline-none transition ease-in-out duration-150">
+                Continue with GitHub
+            </a>
         </div>
     </form>
 </x-guest-layout>
